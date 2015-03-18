@@ -7,6 +7,11 @@ import java.io.FileNotFoundException;
 public class Main {
 
     public static String defaultFile = "salary.txt";
+
+    /*
+    * Read to list all files from args or deafult file if args is empty.
+    * Displays result from all public methods in Employees.
+    */
     public static void main(String[] args) {
         if (args.length == 0) {
             args = new String[1];
