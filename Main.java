@@ -13,6 +13,7 @@ public class Main {
     * Displays result from all public methods in Employees.
     */
     public static void main(String[] args) {
+        // Read default if args is empty
         if (args.length == 0) {
             args = new String[1];
             args[0] = defaultFile;
@@ -40,7 +41,6 @@ public class Main {
 
     private static List<Employee> readFile(String file) throws FileNotFoundException, ParseException {
         Scanner source = new Scanner(new File(file));
-        List<Employee> l = ParseEmployees.parse(source);
-        return l;
+        return ParseEmployees.parse(source);
     }
 }
