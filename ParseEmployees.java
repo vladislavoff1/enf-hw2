@@ -9,7 +9,6 @@ public class ParseEmployees {
     * each line of source looks like `some name, some job, 123` 
     * Removes excess white spaces. Skips empty lines.
     */
-
     public static List<Employee> parse(Scanner source) throws ParseException {
         List<Employee> list = new LinkedList<Employee>();
 
@@ -24,11 +23,11 @@ public class ParseEmployees {
 
         return list;
     }
+
     /*
     * Convert strings like `some name, some job, 123` to Employee.
     * Removes excess white spaces.
     */
-
     private static Employee parseEmployee(String str) throws ParseException {
         
         String[] info = str.split(",");
