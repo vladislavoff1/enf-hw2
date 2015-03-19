@@ -27,9 +27,15 @@ public class Main {
             } catch (FileNotFoundException e) {
                 System.err.println("File `" + file + "` is not found.");
             } catch (ParseException e) {
-                System.err.println(e.getMessage());
+                System.err.println("Error in `" + file + "`: " + e.getMessage());
             }
         }
+
+        if (list.isEmpty()) {
+            System.err.println("List of employees is empty.");
+            return;
+        }
+
         System.out.println("Max salary:     " + Employees.maxSalary(list));
         System.out.println("Min salary:     " + Employees.minSalary(list));
         System.out.println("Average salary: " + Employees.averageSalary(list));
